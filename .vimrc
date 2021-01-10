@@ -8,10 +8,14 @@ set nocompatible
 filetype plugin on
 
 " tabs and spaces
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
-set noexpandtab
+" set tabstop=8
+" set softtabstop=8
+" set shiftwidth=8
+" set noexpandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " code indentation
 set smartindent
@@ -31,7 +35,7 @@ set incsearch
 
 set path+=**
 
-set wildmode=list:lastused
+"set wildmode=list:lastused
 set wildmenu
 
 command! MakeTags !ctags -R
@@ -43,14 +47,15 @@ set undofile
 "set list
 set listchars=tab:\|~,space:~
 
+highlight Visual ctermbg=11
 if &diff
-	highlight DiffAdd cterm=none ctermfg=none ctermbg=7
-	highlight DiffText cterm=none ctermfg=none ctermbg=7
+	highlight DiffAdd cterm=none ctermfg=none ctermbg=15
+	highlight DiffText cterm=none ctermfg=none ctermbg=15
 	highlight DiffChange ctermbg=none
 	highlight DiffDelete ctermbg=none
 else
 	set colorcolumn=100,120
-	highlight ColorColumn ctermbg=7
+	highlight ColorColumn ctermbg=6
 endif
 
 set noerrorbells
